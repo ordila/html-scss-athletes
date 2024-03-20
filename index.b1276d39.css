@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+.people {
+  --value: 2;
+  grid-template-columns: repeat(var(--value), 220px);
+  justify-content: center;
+  gap: 30px 10px;
+  margin: 20px 0 auto;
+  display: grid;
+}
+
+@media (width >= 1000px) {
+  .people {
+    --value: 4;
+  }
+}
+
+.person {
+  border-radius: 12px;
+  padding: 10px 10px 0;
+  transition: scale 1s;
+}
+
+.person:hover {
+  z-index: 1;
+  background-color: #eee;
+  margin-bottom: -20%;
+  scale: 1.2;
+}
+
+.person:hover .photo img {
+  border-radius: 60px;
+}
+
+.person:hover .extra {
+  display: block;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.photo img {
+  border-radius: 200px;
+  width: 100%;
+  height: 100%;
+  transition: border-radius 1s;
+}
+
+.photo .rank {
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.details {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.details .extra {
+  margin-top: 9px;
+  padding-bottom: 16px;
+  display: none;
+}
+
+.details .extra .sport:after {
+  content: ",";
+}
+
+.details .extra .pay:before {
+  content: "$";
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
